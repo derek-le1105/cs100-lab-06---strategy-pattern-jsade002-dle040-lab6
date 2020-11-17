@@ -1,7 +1,7 @@
 #ifndef DIV
 #define DIV
 
-#include "base.hpp"
+#include "../base.hpp"
 #include "op.hpp"
 
 class Div: public Base

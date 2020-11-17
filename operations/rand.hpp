@@ -1,7 +1,7 @@
 #ifndef RAND
 #define RAND
 
-#include "base.hpp"
+#include "../base.hpp"
 #include "op.hpp"
 #include <cstdlib>
 

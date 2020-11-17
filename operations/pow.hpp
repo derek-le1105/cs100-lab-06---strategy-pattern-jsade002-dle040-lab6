@@ -1,7 +1,7 @@
 #ifndef POW
 #define POW
 
-#include "base.hpp"
+#include "../base.hpp"
 #include "op.hpp"
 #include <cmath>
 
