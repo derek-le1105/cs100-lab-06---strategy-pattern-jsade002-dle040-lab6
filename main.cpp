@@ -1,10 +1,10 @@
 #include <iostream>
 
 #include "base.hpp"
-#include "op.hpp"
-#include "Add.hpp"
-#include "Mult.hpp"
-#include "Sub.hpp"
+#include "operations/op.hpp"
+#include "operations/Add.hpp"
+#include "operations/Mult.hpp"
+#include "operations/Sub.hpp"
 
 
 int main() {
