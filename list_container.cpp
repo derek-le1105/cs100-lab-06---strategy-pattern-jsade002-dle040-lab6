@@ -23,7 +23,37 @@ void listContainer::sort(){
 }
 
 void listContainer::swap(int i , int j){
+    Base* jBase;
+    Base* iBase;
+    
+    std::list<Base*> tempList;
+    std::list<Base*> tempList2 = container;
+    std::list<Base*> tempList3 = container;
+    int count = 0;
+    while(!tempList2.empty()){
+        if(count == j)
+            jBase = this->at(j);
+        else if(count == i)
+            iBase = this->at(i);
+        else{
+            tempList2.pop_front();
+            count++;
+        }
+    }
+    count = 0;
+    while(!tempList3.empty()){
+         if(count == j)
+            tempList.push_back(jBase);
+        else if(count == i)
+            tempList.push_back(iBase);
+        else{
+            tempList2.push_back(tempList3.front());
+            tempList3.pop_front();
+            count++;
+        }
+    }
 
+    container = tempList;
 }
 
 Base* listContainer::at(int i){
