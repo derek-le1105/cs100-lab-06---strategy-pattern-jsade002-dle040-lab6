@@ -9,13 +9,14 @@ void listContainer::add_element(Base* element){
 }
 
 void listContainer::print(){
-    std::list<Base*> tempList = container;
-    int count = container.size();
-
-    while(!tempList.empty()){
-        std::cout << tempList.front()->stringify();
-        tempList.pop_front();
+    std::list<Base*>::iterator it = container.begin();
+    int containerSize = container.size();
+    std::string expression = "";
+    for(it; it != container.end(); ++it){
+        expression += container.front()->stringify();       
     }
+
+    std::cout << expression;
 }
 
 void listContainer::sort(){
@@ -23,37 +24,12 @@ void listContainer::sort(){
 }
 
 void listContainer::swap(int i , int j){
-    Base* jBase;
-    Base* iBase;
-    
-    std::list<Base*> tempList;
-    std::list<Base*> tempList2 = container;
-    std::list<Base*> tempList3 = container;
-    int count = 0;
-    while(!tempList2.empty()){
-        if(count == j)
-            jBase = this->at(j);
-        else if(count == i)
-            iBase = this->at(i);
-        else{
-            tempList2.pop_front();
-            count++;
-        }
-    }
-    count = 0;
-    while(!tempList3.empty()){
-         if(count == j)
-            tempList.push_back(jBase);
-        else if(count == i)
-            tempList.push_back(iBase);
-        else{
-            tempList2.push_back(tempList3.front());
-            tempList3.pop_front();
-            count++;
-        }
-    }
-
-    container = tempList;
+    Base* tmp;
+    std::list<Base*>::iterator it1 = container.begin();
+    std::list<Base*>::iterator it2 = container.begin();
+    std::advance(it1, i);
+    std::advance(it2, j);
+    std::swap(*it1, *it2);       
 }
 
 Base* listContainer::at(int i){
