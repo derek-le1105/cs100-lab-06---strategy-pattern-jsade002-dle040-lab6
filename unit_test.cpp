@@ -7,6 +7,7 @@
 #include "tests/div_test.hpp"
 #include "tests/rand_test.hpp"
 #include "tests/sub_test.hpp"
+#include "tests/List_tests.hpp"
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
