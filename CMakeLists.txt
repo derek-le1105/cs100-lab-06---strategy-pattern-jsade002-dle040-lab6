@@ -6,6 +6,8 @@ SET(CMAKE_CXX_STANDARD 11)
 
 ADD_EXECUTABLE(test
     unit_test.cpp    
+    list_container.cpp
+    bubble_sort.cpp
 )
 
 ADD_EXECUTABLE(lab
