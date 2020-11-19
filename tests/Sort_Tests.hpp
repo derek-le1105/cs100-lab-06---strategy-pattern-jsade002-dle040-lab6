@@ -102,4 +102,5 @@ TEST(SortTestSet, BubbleSortTest){
     EXPECT_EQ(container->at(2)->evaluate(), 28);
 
 }
+
 #endif
