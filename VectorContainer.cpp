@@ -1,4 +1,5 @@
 #include "VectorContainer.hpp"
+#include <iostream>
 
 void VectorContainer::set_sort_function(Sort* func)
 {
@@ -14,7 +15,7 @@ void VectorContainer::print()
 {
 	for(int i = 0; i < this->vContainer.size(); i++)
 	{
-		vContainer[i]->stringify();
+		std::cout << vContainer[i]->stringify();
 	}
 }
 
